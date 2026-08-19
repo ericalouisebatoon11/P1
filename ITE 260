@@ -37,7 +37,7 @@ discount_amount = subtotal * (discount / 100)
 total_amount = subtotal - discount_amount
 
 # Receipt Output
-print("\n==========================================")
+print("=========================================")
 print("              STORE RECEIPT")
 print("==========================================")
 
