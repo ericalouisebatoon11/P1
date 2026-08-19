@@ -1,0 +1,68 @@
+print("==========================================")
+print("              STORE RECEIPT")
+print("==========================================")
+
+# A. Customer Information
+customer_name = input("Enter Customer Name: ")
+contact_number = input("Enter Contact Number: ")
+address = input("Enter Address: ")
+
+print("--- Product Information ---")
+
+product1 = input("Enter Product 1 Name: ")
+price1 = float(input("Enter Price: "))
+quantity1 = int(input("Enter Quantity: "))
+
+
+product2 = input("Enter Product 2 Name: ")
+price2 = float(input("Enter Price: "))
+quantity2 = int(input("Enter Quantity: "))
+
+
+product3 = input("Enter Product 3 Name: ")
+price3 = float(input("Enter Price: "))
+quantity3 = int(input("Enter Quantity: "))
+
+
+discount = float(input("Enter Discount (%): "))
+
+
+amount1 = price1 * quantity1
+amount2 = price2 * quantity2
+amount3 = price3 * quantity3
+
+
+subtotal = amount1 + amount2 + amount3
+
+
+discount_amount = subtotal * (discount / 100)
+
+
+total_amount = subtotal - discount_amount
+
+
+print("==========================================")
+print("              STORE RECEIPT")
+print("==========================================")
+
+print("Customer Name :", customer_name)
+print("Contact No.   :", contact_number)
+print("Address       :", address)
+
+print("------------------------------------------")
+print(f"{'Product':<15}{'Price':>8}{'Qty':>6}{'Amount':>10}")
+print("------------------------------------------")
+
+print(f"{product1:<15}{price1:>8.2f}{quantity1:>6}{amount1:>10.2f}")
+print(f"{product2:<15}{price2:>8.2f}{quantity2:>6}{amount2:>10.2f}")
+print(f"{product3:<15}{price3:>8.2f}{quantity3:>6}{amount3:>10.2f}")
+
+print("------------------------------------------")
+print(f"{'Subtotal':<29}{subtotal:>10.2f}")
+print(f"{'Discount (' + str(discount) + '%)':<29}{discount_amount:>10.2f}")
+print("------------------------------------------")
+print(f"{'TOTAL':<29}{total_amount:>10.2f}")
+print("==========================================")
+
+print("Thank you for your purchase!")
+print("Please come again!")
