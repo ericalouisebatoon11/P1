@@ -9,6 +9,7 @@ address = input("Enter Address: ")
 
 print("--- Product Information ---")
 
+
 product1 = input("Enter Product 1 Name: ")
 price1 = float(input("Enter Price: "))
 quantity1 = int(input("Enter Quantity: "))
@@ -31,37 +32,29 @@ amount1 = price1 * quantity1
 amount2 = price2 * quantity2
 amount3 = price3 * quantity3
 
-
 subtotal = amount1 + amount2 + amount3
-
-
 discount_amount = subtotal * (discount / 100)
-
-
 total_amount = subtotal - discount_amount
 
-
-print("==========================================")
+# Receipt Output
+print("\n==========================================")
 print("              STORE RECEIPT")
 print("==========================================")
 
-print("Customer Name :", customer_name)
-print("Contact No.   :", contact_number)
-print("Address       :", address)
+print("Customer Name:", customer_name)
+print("Contact No.:", contact_number)
+print("Address:", address)
+
+print("\nProducts:")
+print(product1, "-", quantity1, "x", price1, "=", amount1)
+print(product2, "-", quantity2, "x", price2, "=", amount2)
+print(product3, "-", quantity3, "x", price3, "=", amount3)
 
 print("------------------------------------------")
-print(f"{'Product':<15}{'Price':>8}{'Qty':>6}{'Amount':>10}")
-print("------------------------------------------")
-
-print(f"{product1:<15}{price1:>8.2f}{quantity1:>6}{amount1:>10.2f}")
-print(f"{product2:<15}{price2:>8.2f}{quantity2:>6}{amount2:>10.2f}")
-print(f"{product3:<15}{price3:>8.2f}{quantity3:>6}{amount3:>10.2f}")
-
-print("------------------------------------------")
-print(f"{'Subtotal':<29}{subtotal:>10.2f}")
-print(f"{'Discount (' + str(discount) + '%)':<29}{discount_amount:>10.2f}")
-print("------------------------------------------")
-print(f"{'TOTAL':<29}{total_amount:>10.2f}")
+print("Subtotal:", subtotal)
+print("Discount:", discount, "%")
+print("Discount Amount:", discount_amount)
+print("Total Amount:", total_amount)
 print("==========================================")
 
 print("Thank you for your purchase!")
